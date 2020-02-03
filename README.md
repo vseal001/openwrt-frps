@@ -28,7 +28,7 @@ opkg install frps_*.ipk
 进入 SDK 根目录或源码根目录，执行命令下载 Makefile：
 
 ```sh
-git clone https://github.com/kuoruan/openwrt-frp.git package/frp
+git clone https://github.com/vseal001/openwrt-frps.git package/frps
 ```
 
 编译流程：
@@ -39,7 +39,6 @@ git clone https://github.com/kuoruan/openwrt-frp.git package/frp
 
 make menuconfig
 
-Network  ---> Web Servers/Proxies  ---> <*> frpc
 Network  ---> Web Servers/Proxies  ---> <*> frps
 
 make package/frp/{clean,compile} V=s
@@ -48,6 +47,5 @@ make package/frp/{clean,compile} V=s
 ## 卸载说明
 
 ```sh
-opkg remove frpc
 opkg remove frps
 ```
