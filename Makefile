@@ -7,11 +7,11 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=frp
+PKG_NAME:=frps
 PKG_VERSION:=0.31.1
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE:=frp-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/fatedier/frp/tar.gz/v$(PKG_VERSION)?
 PKG_HASH:=b1fa893c09e61db084bf6ddc0abcaf105c2828a887ee0fc376bef1a66da9b095
 
@@ -57,7 +57,7 @@ define frp/templates
   endef
 endef
 
-FRP_COMPONENTS:=frpc frps
+FRP_COMPONENTS:=frps
 
 $(foreach component,$(FRP_COMPONENTS), \
   $(eval $(call frp/templates,$(component))) \
